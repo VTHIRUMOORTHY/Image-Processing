@@ -1,0 +1,54 @@
+•	imread
+A = imread(FILENAME) reads a grayscale or color image from the file specified by the string FILENAME. If the file is not in the current    directory, or in a directory on the MATLAB path, specify the full pathname. The return value A is an array containing the image data. If the file contains a grayscale image, A is an M-by-N array. If the file contains a truecolor image, A is an M-by-N-by-3 array.
+
+•	uigetfile
+filename = uigetfile displays a modal dialog box that lists files in the current folder and enables you to select or enter the name of a file. If the filename is valid and if the file exists, uigetfile returns the filename as a string when you click Open. Otherwise uigetfile displays an appropriate error message, after which control returns to the dialog box. You can then enter another filename or click Cancel. If you click Cancel or close the dialog window, uigetfile returns 0. Successful execution of uigetfile does not open a file; it only returns the name of an existing file that you identify.
+
+•	imresize
+B = imresize(A, scale) returns image B that is scale times the size of A. The input image A can be a grayscale, RGB, or binary image. If scale is between 0 and 1.0, B is smaller than A. If scale is greater than 1.0, B is larger than A.
+
+•	subplot
+H = subplot(m,n,p), or subplot(mnp), breaks the Figure window into an m-by-n matrix of small axes, selects the p-th axes for the current plot, and returns the axes handle.  The axes are counted along the top row of the Figure window, then the second row, etc.
+
+•	disp
+disp(X) displays an array, without printing the array name. If X contains a text string, the string is displayed.
+Another way to display an array on the screen is to type its name, but this prints a leading "X=," which is not always desirable.
+
+•	imshow
+imshow(I) displays the image I which can be either RGB, gray or binary image
+
+
+
+
+•	imsave
+imsave creates a Save Image tool in a separate figure that is associated with the image in the current figure, called the target image. The Save Image tool displays an interactive file chooser dialog box (shown below) in which you can specify a path and filename. When you click Save, the Save Image tool writes the target image to a file using the image file format you select in the Files of Type menu. imsave uses imwrite to save the image, using default options.
+
+•	padarray
+B = padarray(A, padsize) pads array A with 0's (zeros). padsize is a vector of positive integers that specifies both the amount of padding to add and the dimension along which to add it. The value of an element in the vector specifies the amount of padding to add. The order of the element in the vector specifies the dimension along which to add the padding.
+
+•	sort
+B = sort(A) sorts the elements along different dimensions of an array, and arranges those elements in ascending order.
+
+•	find
+ind = find(X) locates all nonzero elements of array X, and returns the linear indices of those elements in vector ind. If X is a row vector, then ind is a row vector; otherwise, ind is a column vector. If X contains no nonzero elements or is an empty array, then ind is an empty array.
+
+
+•	eye
+Y = eye(n) returns the n-by-n identity matrix.
+Y = eye(m,n) or Y = eye([m n]) returns an m-by-n matrix with 1's on the diagonal and 0's elsewhere. The size inputs m and n should be nonnegative integers. Negative integers are treated as 0. 
+Y = eye(size(A)) returns an identity matrix the same size as A.
+
+•	meshgrid
+[X,Y] = meshgrid(x,y) transforms the domain specified by vectors x and y into arrays X and Y, which can be used to evaluate functions of two variables and three-dimensional mesh/surface plots. The rows of the output array X are copies of the vector x; columns of the output array Y are copies of the vector y.
+[X,Y] = meshgrid(x) is the same as [X,Y] = meshgrid(x,x).
+
+•	size
+[M,N] = size(X) for matrix X, returns the number of rows and columns in X as separate output variables.
+
+•	strcmp
+TF = strcmp('str1', 'str2') compares the strings str1 and str2 and returns logical 1 (true) if they are identical, and returns logical 0 (false) otherwise. str1 and str2 can be character arrays of any dimension, but strcmp does not return true unless the sizes of both arrays are equal, and the contents of the two arrays are the same.
+
+
+
+•	strfind
+k = strfind(str, pattern) searches the string str for occurrences of a shorter string, pattern, and returns the starting index of each such occurrence in the double array k. If pattern is not found in str, or if pattern is longer than str, then strfind  returns the empty array [].
